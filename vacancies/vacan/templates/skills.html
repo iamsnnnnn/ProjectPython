@@ -7,7 +7,8 @@
 {% block content %}
 <h1 class="skill_name">ТОП-10 навыков iOS-разработчика по годам</h1>
 <div class="skills_com">
-    {% for year in d_skill.items %}
+    {% for year in skills.items %}
+    <p class="years">{{ year.0 }}</p>
     <table class="skills_table">
         <thead>
         <tr>

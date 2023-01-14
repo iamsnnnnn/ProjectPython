@@ -4,6 +4,8 @@ from django.template import loader
 
 from vacan.models import SalaryByYear, VacancieByYear, SalaryByYearsForCurrentJob, VacancieByYearForCurrentJob, AvgSalaryByCity, FractionVacancyByCity, KeySkills
 
+from vacan.logika.api_vac import get_vacs
+
 
 def index(request):
     home = {
@@ -63,4 +65,10 @@ def skills(request):
     return HttpResponse(template.render(context, request))
 
 def recent_vac(request):
-    return render(request, 'recent_vac.html')
+    c = get_vacs()
+
+    template = loader.get_template('recent_vac.html')
+    context = {
+        'skills': c
+    }
+    return HttpResponse(template.render(context, request))
