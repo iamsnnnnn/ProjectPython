@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<h1 class="skill_name">Востребованность</h1>
+{% endblock%}
+
+{% block content %}
+<h1 class="dem">Востребованность</h1>
+<p class="text-dem"></p>
+
+<div class="stat">
+    <table class="demand_table">
+    <thead>
+        <tr>
+            <th>год</th>
+            <th>зарплата</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for i in x %}
+        <tr>
+            <th>{{i.year}}</th>
+            <th>{{i.salary}}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    <img src="{% static 'vacan/img/Figure_1.png' %}" alt="график_1">
+</div>
+
+<p class="text-dem"></p>
+
+<div class="stat">
+<table class="demand_table">
+    <thead>
+        <tr>
+            <th>год</th>
+            <th>количество</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for i in y %}
+        <tr>
+            <th>{{i.year}}</th>
+            <th>{{i.vacancie}}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    <img src="{% static 'vacan/img/Figure_2.png' %}" alt="график_2">
+</div>
+
+<p class="text-dem"></p>
+
+<div class="stat">
+<table class="demand_table">
+    <thead>
+        <tr>
+            <th>год</th>
+            <th>зарплата</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for i in z %}
+        <tr>
+            <th>{{i.year}}</th>
+            <th>{{i.salary}}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    <img src="{% static 'vacan/img/Figure_3.png' %}" alt="график_3">
+</div>
+
+<p class="text-dem"></p>
+
+<div class="stat">
+<table class="demand_table">
+    <thead>
+        <tr>
+            <th>год</th>
+            <th>количество</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for i in w %}
+        <tr>
+            <th>{{i.year}}</th>
+            <th>{{i.vacancy}}</th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    <img src="{% static 'vacan/img/Figure_4.png' %}" alt="график_4">
+</div>
+{% endblock%}
+
