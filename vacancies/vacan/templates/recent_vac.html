@@ -7,14 +7,20 @@
 {% block content %}
 <h1 class="skill_name">Последние вакансии</h1>
     {% for i in skills %}
-<p>{{i.name}}
-    {{i.description}}
-    {{i.key_skills}}
-    {{i.employer.name}}
-    {{i.salary}}
-    {{i.area.name}}
-    {{i.published_at}}
-    {% endfor %}
+<div class="vacan-end"><h3 class="name-vac">{{i.name}}</h3>
+        {{i.description|safe}}
+        {% for i in skills %}
+            {{i.name}},
+        {% endfor %}
+        <p class="inf">Компания: {{i.employer.name}}</p>
+        <p class="inf">Зарплата: {{i.salary.from}} {{i.salary.to}} {{i.salary.currency}}</p>
+        <p class="inf">Город: {{i.area.name}}</p>
+        <p class="inf">Дата публикации: {{i.published_at|slice:10}}</p></div>
+        {% endfor %}
 {% endblock%}
+
+
+
+
 
 

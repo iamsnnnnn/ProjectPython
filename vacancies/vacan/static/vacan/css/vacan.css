@@ -189,6 +189,23 @@ p{
     margin-left: 50px;
 }
 
-
 .block_1{
+}
+
+.vacan-end{
+    text-align: left;
+    border: 5px solid #6f42c1;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background: #f1defc;
+    padding-left: 10px;
+}
+
+.name-vac{
+    text-align: center;
+}
+
+.inf{
+    display: flex;
+
 }
